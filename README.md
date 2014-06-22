@@ -13,7 +13,7 @@ development and testing purposes only.
 
 <strong>Warning</strong>: Please do not use this application to generate real identifiers
 for your assets.  I will not be liable for any problems, risk, damages or other actions
-arising out of the use of this code for anything other than development and testing.
+arising out of the use of this code.
 
 <strong>Note</strong>: I do not provide any support or enhancements for this application.
 In case you require any changes, do note that the application is a simple HTML +
