@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zepter | Genie</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/alte.css" rel="stylesheet" type="text/css" />
+    <link href="css/fa.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.touchspin.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.touchspin.js"></script>
+    <script src="js/zepter.js" type="text/javascript"></script>
+  </head>
+  <body class="skin-blue">
+    <header class="header">
+      <span class="logo">Zepter</span>
+      <nav class="navbar navbar-static-top" role="navigation"></nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+      <aside class="left-side sidebar-offcanvas">
+        <section class="sidebar">
+          <ul class="sidebar-menu">
+            <li class="active">
+              <a href="javascript:void(0);">
+                <i class="fa fa-file"></i>
+                <span>ISRC <small><i class="fa fa-angle-double-right"></i> 12 characters</small></span>
+                <ul>
+                  <li><small><em>CC</em> - 2-letter country code</small></li>
+                  <li><small><em>AAA</em> - 3-character issuer code</small></li>
+                  <li><small><em>NN</em> - 2-digit year</small></li>
+                  <li><small><em>NNNNN</em> - 5-digit designation code</small></li>
+                </ul>
+              </a>
+            </li>
+            <li class="active">
+              <a href="javascript:void(0);">
+                <i class="fa fa-film"></i>
+                <span>GRid <small><i class="fa fa-angle-double-right"></i> 18 characters</small></span>
+                <ul>
+                  <li><small><em>A1</em> - fixed scheme code</small></li>
+                  <li><small><em>AAAAA</em> - 5-character issuer code</small></li>
+                  <li><small><em>AAAAAAAAAA</em> - 10-character release identifier</small></li>
+                  <li><small><em>A</em> - check character</small></li>
+                </ul>
+              </a>
+            </li>
+            <li class="active">
+              <a href="javascript:void(0);">
+                <i class="fa fa-barcode"></i>
+                <span>EAN <small><i class="fa fa-angle-double-right"></i> 13 digits</small></span>
+                <ul>
+                  <li><small><em>NNN</em> - registrar code</small></li>
+                  <li><small><em>NNN-NNNNNN</em> - 3 to 6-digit manufacturer code</small></li>
+                  <li><small><em>NNN-NNNNNN</em> - 3 to 6-digit article code</small></li>
+                  <li><small><em>N</em> - check digit</small></li>
+                </ul>
+              </a>
+            </li>
+            <li class="active">
+              <a href="javascript:void(0);">
+                <i class="fa fa-barcode"></i>
+                <span>UPC <small><i class="fa fa-angle-double-right"></i> 12 digits</small></span>
+                <ul>
+                  <li><small><em>N</em> - number system</small></li>
+                  <li><small><em>NNNNN / NNNNNNNN</em> - manufacturer code</small></li>
+                  <li><small><em>NNNNN / NN</em> - product code</small></li>
+                  <li><small><em>N</em> - check digit</small></li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <aside class="right-side">
+        <section class="content-header">
+          <h1>Genie 
+          <small><i class="fa fa-angle-double-right"></i> Useful generators for GRid, ISRC, EAN and UPC</small></h1>
+        </section>
+        <section class="content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box box-success">
+                <div class="box-header">
+                  <h3 class="box-title">ISRC 
+                  <small><i class="fa fa-angle-double-right"></i> International Sound Recording Code</small></h3>
+                </div>
+                <div class="box-body">
+                  <form role="form">
+                    <div class="form-group input-group">
+                      <input class="counter form-control" id="isrc-count" placeholder="Choose number of ISRC&#39;s to generate"
+                      type="text" />
+                      <div class="input-group-btn">
+                        <button class="btn" type="reset"><i class="fa fa-refresh"></i></button>
+                        <button class="btn btn-success generator" id="isrc" type="button">Generate</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="isrc-values" readonly="readonly" rows="7"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="box box-primary">
+                <div class="box-header">
+                  <h3 class="box-title">GRid 
+                  <small><i class="fa fa-angle-double-right"></i> Global Release Identifier</small></h3>
+                </div>
+                <div class="box-body">
+                  <form role="form">
+                    <div class="form-group input-group">
+                      <input class="counter form-control" id="grid-count" placeholder="Choose number of GRid&#39;s to generate"
+                      type="text" />
+                      <div class="input-group-btn">
+                        <button class="btn" type="reset"><i class="fa fa-refresh"></i></button>
+                        <button class="btn btn-primary generator" id="grid" type="button">Generate</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="grid-values" readonly="readonly" rows="7"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title">EAN 
+                  <small><i class="fa fa-angle-double-right"></i> International Article Number</small></h3>
+                </div>
+               <div class="box-body">
+                  <form role="form">
+                    <div class="form-group input-group">
+                      <input class="counter form-control" id="ean-count" placeholder="Choose number of EAN&#39;s to generate"
+                      type="text" />
+                      <div class="input-group-btn">
+                        <button class="btn" type="reset"><i class="fa fa-refresh"></i></button>
+                        <button class="btn btn-info generator" id="ean" type="button">Generate</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="ean-values" readonly="readonly" rows="10"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="box box-danger">
+                <div class="box-header">
+                  <h3 class="box-title">UPC 
+                  <small><i class="fa fa-angle-double-right"></i> Universal Product Code</small></h3>
+                </div>
+                <div class="box-body">
+                  <form role="form">
+                    <div class="form-group input-group">
+                      <input class="counter form-control" id="upc-count" placeholder="Choose number of UPC&#39;s to generate"
+                      type="text" />
+                      <div class="input-group-btn">
+                        <button class="btn" type="reset"><i class="fa fa-refresh"></i></button>
+                        <button class="btn btn-danger generator" id="upc" type="button">Generate</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="upc-values" readonly="readonly" rows="10"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+  </body>
+</html>
