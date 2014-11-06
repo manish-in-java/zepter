@@ -19,7 +19,10 @@ arising out of the use of this code.
 In case you require any changes, do note that the application is a simple HTML +
 JavaScript application and you can download the source code to make any required changes.
 
-# 2. License
+# 2. Usage
+If you are simply interested in using this application, just access it online [here](https://cdn.rawgit.com/manish-in-java/zepter/master/index.html).
+
+# 3. License
 This source code in its entirety is being made available under the following licensing terms.
 
     Copyright (C) 2014
